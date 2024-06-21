@@ -17,6 +17,46 @@
 <body>
     <div id="target"></div>
     <script id="htmlTemplate" type="text/x-handlebars-template" target="_blank">
+        <style>ul.cardlist {
+            list-style: none;
+            font-size: 12px;
+        }
+        
+        .ProjectName {
+            font-size: 3em;
+            color: rebeccapurple;
+        }
+        
+        .col {
+            width: 31%;
+            padding: 10px;
+            float: left;
+        }
+        
+        .cellTitle {
+            background-color: rebeccapurple;
+            font-size: 2em;
+            color: white;
+            padding: 5px;
+        }
+        
+        li.carditem {
+            display: block;
+            position: relative;
+            clear: both;
+            box-shadow: 6px 6px 6px 6px rebeccapurple;
+            margin-bottom: 20px;
+
+        }
+        
+        .cardcell {
+            background-color: #66339921;
+        }
+        .clear{clear: both;}
+        .cellbody {
+            font-size: 1.2em;
+            padding: 5px;
+        }</style>
 <ul class="cardlist">
     {{#each rows}}<li  {{{enableSelection index}}} class="carditem"> 
     
@@ -26,7 +66,12 @@
                 <div class="cardcell"><div class="cellTitle">Scope description</div><div class="cellbody"><ul>
                 <li>dfsdf sf sd fsd fsd fsd f</li><li>dfsdf sf sd fsd fsd fsd f</li></ul></div></div>
                 <div class="cardcell"><div class="cellTitle">Key Milestone and deliverables</div><div class="cellbody"><ul>
-                    <li>dfsdf sf sd fsd fsd fsd f</li><li>dfsdf sf sd fsd fsd fsd f</li></ul></div></div>
+                    <li>dfsdf sf sd fsd fsd fsd f</li><li>dfsdf sf sd fsd fsd fsd f</li>
+                    <li>dfsdf sf sd fsd fsd fsd f</li>
+                    <li>dfsdf sf sd fsd fsd fsd f</li>
+                    <li>dfsdf sf sd fsd fsd fsd f</li>
+                    <li>dfsdf sf sd fsd fsd fsd f</li>
+                    <li>dfsdf sf sd fsd fsd fsd f</li></ul></div></div>
         </div>
         <div class="col">
             <div class="cardcell"><div class="cellTitle">Relavent KPI</div><div class="cellbody"><ul>
@@ -38,8 +83,19 @@
                     <div class="cardcell"><div class="cellTitle">Dependency</div><div class="cellbody"><ul>
                         <li>dfsdf sf sd fsd fsd fsd f</li><li>dfsdf sf sd fsd fsd fsd f</li></ul></div></div>
     </div>
-            <div class="col"> <div>{{FormatMoment StartDate "yyyy"}} 888</div></div>
+            
+            <div class="col">
+                <div class="cardcell"><div class="cellTitle">Owner</div><div class="cellbody">ABCD</div></div>
+                <div class="cardcell"><div class="cellTitle">Sponsor</div><div class="cellbody">ABCD</div></div>
+                    <div class="cardcell"><div class="cellTitle">Time Frame</div><div class="cellbody">{{FormatMoment StartDate "MM-yyyy"}}  -{{FormatMoment StartDate "MM-yyyy"}} </div></div>
+                        <div class="cardcell"><div class="cellTitle">Budget</div><div class="cellbody"><ul>
+                           <li>Capex 70%</li><li>Opex 30%</li></ul>
+                        </div>
+                    </div>
         </div>
+    <div class="clear"></div>
+
+    </div>
        
     </li>
     {{/each}}
