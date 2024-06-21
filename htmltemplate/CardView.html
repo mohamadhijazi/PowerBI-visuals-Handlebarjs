@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='./node_modules/handlebars/dist/handlebars.js'></script>
+    <script src='./node_modules/jquery/dist/jquery.min.js'></script>
+
+    <script src='./node_modules/moment/min/moment.min.js'></script>
+    <script src='./Handlebarhelpers.js'></script>
+
+</head>
+
+<body>
+    <div id="target"></div>
+    <script id="htmlTemplate" type="text/x-handlebars-template" target="_blank">
+<ul class="cardlist">
+    {{#each rows}}<li  {{{enableSelection index}}} class="carditem"> 
+    
+        <div {{{enableSelection index}}} class="ProjectName">{{ProjectName}}</div>
+        <div class="cardbody">
+            <div class="col">
+                <div class="cardcell"><div class="cellTitle">Scope description</div><div class="cellbody"><ul>
+                <li>dfsdf sf sd fsd fsd fsd f</li><li>dfsdf sf sd fsd fsd fsd f</li></ul></div></div>
+                <div class="cardcell"><div class="cellTitle">Key Milestone and deliverables</div><div class="cellbody"><ul>
+                    <li>dfsdf sf sd fsd fsd fsd f</li><li>dfsdf sf sd fsd fsd fsd f</li></ul></div></div>
+        </div>
+        <div class="col">
+            <div class="cardcell"><div class="cellTitle">Relavent KPI</div><div class="cellbody"><ul>
+            <li>dfsdf sf sd fsd fsd fsd f</li><li>dfsdf sf sd fsd fsd fsd f</li></ul></div></div>
+            <div class="cardcell"><div class="cellTitle">Target Benefits</div><div class="cellbody"><ul>
+                <li>dfsdf sf sd fsd fsd fsd f</li><li>dfsdf sf sd fsd fsd fsd f</li></ul></div></div>
+                <div class="cardcell"><div class="cellTitle">Potential Risk</div><div class="cellbody"><ul>
+                    <li>dfsdf sf sd fsd fsd fsd f</li><li>dfsdf sf sd fsd fsd fsd f</li></ul></div></div>
+                    <div class="cardcell"><div class="cellTitle">Dependency</div><div class="cellbody"><ul>
+                        <li>dfsdf sf sd fsd fsd fsd f</li><li>dfsdf sf sd fsd fsd fsd f</li></ul></div></div>
+    </div>
+            <div class="col"> <div>{{FormatMoment StartDate "yyyy"}} 888</div></div>
+        </div>
+       
+    </li>
+    {{/each}}
+    </ul>
+</script>
+    <script>
+        registerHelpers();
+        let template = Handlebars.compile($("#htmlTemplate").html());
+
+        var data = [
+            {
+                "ProjectName": "Project 10",
+                "Phase": "Execution",
+                "Status": "Not Started",
+                "StartDate": "2001-01-09T21:00:00.000Z",
+                "selectionId": {
+                    "deepestNodeLevelInPath": -1,
+                    "measures": [
+                        "Project 10"
+                    ],
+                    "dataMap": {
+                        "{\"identityIndex\":5}": [
+                            {
+                                "identityIndex": 5
+                            }
+                        ]
+                    },
+                    "nodeIsCollapsed": null,
+                    "nodeIndexes": [],
+                    "key": "{\"{\\\"identityIndex\\\":5}\":[{\"identityIndex\":5}]}[\"Project 10\"]"
+                },
+                "index": 0
+            },
+            {
+                "ProjectName": "Project 11",
+                "Phase": "Closure",
+                "Status": "Not Started",
+                "StartDate": "2001-01-10T21:00:00.000Z",
+                "selectionId": {
+                    "deepestNodeLevelInPath": -1,
+                    "measures": [
+                        "Project 11"
+                    ],
+                    "dataMap": {
+                        "{\"identityIndex\":6}": [
+                            {
+                                "identityIndex": 6
+                            }
+                        ]
+                    },
+                    "nodeIsCollapsed": null,
+                    "nodeIndexes": [],
+                    "key": "{\"{\\\"identityIndex\\\":6}\":[{\"identityIndex\":6}]}[\"Project 11\"]"
+                },
+                "index": 1
+            },
+            {
+                "ProjectName": "Project 12",
+                "Phase": "Closure",
+                "Status": "On Track",
+                "StartDate": "2001-01-11T21:00:00.000Z",
+                "selectionId": {
+                    "deepestNodeLevelInPath": -1,
+                    "measures": [
+                        "Project 12"
+                    ],
+                    "dataMap": {
+                        "{\"identityIndex\":7}": [
+                            {
+                                "identityIndex": 7
+                            }
+                        ]
+                    },
+                    "nodeIsCollapsed": null,
+                    "nodeIndexes": [],
+                    "key": "{\"{\\\"identityIndex\\\":7}\":[{\"identityIndex\":7}]}[\"Project 12\"]"
+                },
+                "index": 2
+            },
+            {
+                "ProjectName": "Project 13",
+                "Phase": "Closure",
+                "Status": "On Track",
+                "StartDate": "2001-01-12T21:00:00.000Z",
+                "selectionId": {
+                    "deepestNodeLevelInPath": -1,
+                    "measures": [
+                        "Project 13"
+                    ],
+                    "dataMap": {
+                        "{\"identityIndex\":8}": [
+                            {
+                                "identityIndex": 8
+                            }
+                        ]
+                    },
+                    "nodeIsCollapsed": null,
+                    "nodeIndexes": [],
+                    "key": "{\"{\\\"identityIndex\\\":8}\":[{\"identityIndex\":8}]}[\"Project 13\"]"
+                },
+                "index": 3
+            },
+            {
+                "ProjectName": "Project 9",
+                "Phase": "Execution",
+                "Status": "Not Started",
+                "StartDate": "2001-01-08T21:00:00.000Z",
+                "selectionId": {
+                    "deepestNodeLevelInPath": -1,
+                    "measures": [
+                        "Project 9"
+                    ],
+                    "dataMap": {
+                        "{\"identityIndex\":9}": [
+                            {
+                                "identityIndex": 9
+                            }
+                        ]
+                    },
+                    "nodeIsCollapsed": null,
+                    "nodeIndexes": [],
+                    "key": "{\"{\\\"identityIndex\\\":9}\":[{\"identityIndex\":9}]}[\"Project 9\"]"
+                },
+                "index": 4
+            }
+        ]
+        var viewport = {
+            "width": 1260.0125459273022,
+            "height": 547.6814985412335,
+            "scale": 0.8848958969116211
+        }
+        var tableViewContext = {
+            "columns": [
+                {
+                    "roles": {
+                        "data": true
+                    },
+                    "type": {
+                        "underlyingType": 1,
+                        "category": null,
+                        "primitiveType": 1,
+                        "extendedType": 1,
+                        "categoryString": null,
+                        "text": true,
+                        "numeric": false,
+                        "integer": false,
+                        "bool": false,
+                        "dateTime": false,
+                        "duration": false,
+                        "binary": false,
+                        "json": false,
+                        "none": false
+                    },
+                    "displayName": "ProjectName",
+                    "queryName": "Projects.ProjectName",
+                    "expr": {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "Projects",
+                            "variable": "p",
+                            "kind": 0
+                        },
+                        "ref": "ProjectName",
+                        "kind": 2
+                    },
+                    "sort": 1,
+                    "sortOrder": 0,
+                    "rolesIndex": {
+                        "data": [
+                            0
+                        ]
+                    },
+                    "index": 1,
+                    "identityExprs": [
+                        {
+                            "_kind": 2,
+                            "source": {
+                                "_kind": 0,
+                                "entity": "Projects",
+                                "kind": 0
+                            },
+                            "ref": "ProjectName",
+                            "kind": 2
+                        }
+                    ]
+                },
+                {
+                    "roles": {
+                        "data": true
+                    },
+                    "type": {
+                        "underlyingType": 1,
+                        "category": null,
+                        "primitiveType": 1,
+                        "extendedType": 1,
+                        "categoryString": null,
+                        "text": true,
+                        "numeric": false,
+                        "integer": false,
+                        "bool": false,
+                        "dateTime": false,
+                        "duration": false,
+                        "binary": false,
+                        "json": false,
+                        "none": false
+                    },
+                    "displayName": "Phase",
+                    "queryName": "Projects.Phase",
+                    "expr": {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "Projects",
+                            "variable": "p",
+                            "kind": 0
+                        },
+                        "ref": "Phase",
+                        "kind": 2
+                    },
+                    "rolesIndex": {
+                        "data": [
+                            1
+                        ]
+                    },
+                    "index": 2,
+                    "identityExprs": [
+                        {
+                            "_kind": 2,
+                            "source": {
+                                "_kind": 0,
+                                "entity": "Projects",
+                                "kind": 0
+                            },
+                            "ref": "Phase",
+                            "kind": 2
+                        }
+                    ]
+                },
+                {
+                    "roles": {
+                        "data": true
+                    },
+                    "type": {
+                        "underlyingType": 1,
+                        "category": null,
+                        "primitiveType": 1,
+                        "extendedType": 1,
+                        "categoryString": null,
+                        "text": true,
+                        "numeric": false,
+                        "integer": false,
+                        "bool": false,
+                        "dateTime": false,
+                        "duration": false,
+                        "binary": false,
+                        "json": false,
+                        "none": false
+                    },
+                    "displayName": "Status",
+                    "queryName": "Projects.Status",
+                    "expr": {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "Projects",
+                            "variable": "p",
+                            "kind": 0
+                        },
+                        "ref": "Status",
+                        "kind": 2
+                    },
+                    "rolesIndex": {
+                        "data": [
+                            3
+                        ]
+                    },
+                    "index": 3,
+                    "identityExprs": [
+                        {
+                            "_kind": 2,
+                            "source": {
+                                "_kind": 0,
+                                "entity": "Projects",
+                                "kind": 0
+                            },
+                            "ref": "Status",
+                            "kind": 2
+                        }
+                    ]
+                }
+            ],
+            "identity": [
+                {
+                    "identityIndex": 5
+                },
+                {
+                    "identityIndex": 6
+                },
+                {
+                    "identityIndex": 7
+                },
+                {
+                    "identityIndex": 8
+                },
+                {
+                    "identityIndex": 9
+                }
+            ],
+            "identityFields": [
+                {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "LensView",
+                        "kind": 0
+                    },
+                    "ref": "Html",
+                    "kind": 2
+                },
+                {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "Projects",
+                        "kind": 0
+                    },
+                    "ref": "ProjectName",
+                    "kind": 2
+                },
+                {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "Projects",
+                        "kind": 0
+                    },
+                    "ref": "Phase",
+                    "kind": 2
+                },
+                {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "Projects",
+                        "kind": 0
+                    },
+                    "ref": "Status",
+                    "kind": 2
+                },
+                {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "Projects",
+                        "kind": 0
+                    },
+                    "ref": "StartDate",
+                    "kind": 2
+                }
+            ],
+            "rows": [
+                [
+                    "Project 10",
+                    "Execution",
+                    "Not Started"
+                ],
+                [
+                    "Project 11",
+                    "Closure",
+                    "Not Started"
+                ],
+                [
+                    "Project 12",
+                    "Closure",
+                    "On Track"
+                ],
+                [
+                    "Project 13",
+                    "Closure",
+                    "On Track"
+                ],
+                [
+                    "Project 9",
+                    "Execution",
+                    "Not Started"
+                ]
+            ]
+        };
+        let result = template({ "rows": data, "viewport": viewport, "tableView": tableViewContext });
+
+        $("#target").html(result);
+    </script>
+</body>
+
+</html>
